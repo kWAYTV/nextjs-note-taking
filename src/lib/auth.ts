@@ -1,5 +1,4 @@
 import { betterAuth } from "better-auth";
-import { emailHarmony } from "better-auth-harmony";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { nextCookies } from "better-auth/next-js";
 import { haveIBeenPwned, openAPI } from "better-auth/plugins";
@@ -95,8 +94,6 @@ export const auth = betterAuth({
   },
 
   plugins: [
-    emailHarmony(),
-
     ...(process.env.NODE_ENV === "development" ? [openAPI()] : []),
 
     haveIBeenPwned({

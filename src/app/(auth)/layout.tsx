@@ -9,11 +9,7 @@ export default async function Layout({
   return (
     <>
       <Header />
-      <main className="py-16 md:py-24">
-        <div className="mx-auto max-w-lg px-6">
-          <div className="flex justify-center">{children}</div>
-        </div>
-      </main>
+      {children}
       <FooterSection />
     </>
   );
