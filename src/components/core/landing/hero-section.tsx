@@ -95,30 +95,29 @@ export default function HeroSection() {
                   className="mx-auto flex w-fit items-center gap-2 border p-1 pr-3"
                 >
                   <span className="bg-muted px-2 py-1 text-xs">New</span>
-                  <span className="text-sm">Introduction Tailark Html</span>
+                  <span className="text-sm">Introducing Aris Notes v2.0</span>
                   <span className="block h-4 w-px bg-(--color-border)"></span>
 
                   <ArrowRight className="size-4" />
                 </Link>
 
                 <h1 className="mt-8 text-4xl font-semibold md:text-5xl xl:text-5xl xl:[line-height:1.125]">
-                  Tame the Wild West <br /> of Frontend Development
+                  Build your second brain <br /> like a developer
                 </h1>
                 <p className="mx-auto mt-8 hidden max-w-2xl text-lg text-wrap sm:block">
-                  Tailwindcss highly customizable components for building modern
-                  websites and applications that look and feel the way you mean
-                  it.
+                  Fast, local-first notes built for code. Keyboard-first UX with
+                  no friction — just flow.
                 </p>
                 <p className="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">
-                  Highly customizable components for building modern websites
-                  and applications, with your personal spark.
+                  Fast, local-first notes built for code. Notes that work the
+                  way you think.
                 </p>
 
                 <div className="mt-8">
                   <Button size="lg" asChild>
                     <Link href="#">
                       <Rocket className="relative size-4" />
-                      <span className="text-nowrap">Start Building</span>
+                      <span className="text-nowrap">Start Taking Notes</span>
                     </Link>
                   </Button>
                 </div>
