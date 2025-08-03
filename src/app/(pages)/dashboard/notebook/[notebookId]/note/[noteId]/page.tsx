@@ -1,5 +1,8 @@
+import { AuthLoading, SignedIn } from "@daveyplate/better-auth-ui";
+
 import { PageWrapper } from "@/components/core/dashboard/page-wrapper";
 import RichTextEditor from "@/components/core/dashboard/rich-text-editor";
+import { NotePageSkeleton } from "@/components/core/loading/dashboard/notes/note-page";
 import { getNoteById } from "@/server/data/notes";
 import { type JSONContent } from "@tiptap/react";
 
@@ -13,21 +16,29 @@ export default async function NotePage({ params }: { params: Params }) {
   const { note } = await getNoteById(noteId);
 
   return (
-    <PageWrapper
-      breadcrumbs={[
-        { label: "Dashboard", href: "/dashboard" },
-        {
-          label: note?.notebook?.name ?? "Notebook",
-          href: `/dashboard/notebook/${note?.notebook?.id}`,
-        },
-        { label: note?.title ?? "Note", href: `/dashboard/note/${noteId}` },
-      ]}
-    >
-      <h1>{note?.title}</h1>
-      <RichTextEditor
-        content={note?.content as JSONContent[]}
-        noteId={noteId}
-      />
-    </PageWrapper>
+    <>
+      <AuthLoading>
+        <NotePageSkeleton />
+      </AuthLoading>
+
+      <SignedIn>
+        <PageWrapper
+          breadcrumbs={[
+            { label: "Dashboard", href: "/dashboard" },
+            {
+              label: note?.notebook?.name ?? "Notebook",
+              href: `/dashboard/notebook/${note?.notebook?.id}`,
+            },
+            { label: note?.title ?? "Note", href: `/dashboard/note/${noteId}` },
+          ]}
+        >
+          <h1>{note?.title}</h1>
+          <RichTextEditor
+            content={note?.content as JSONContent[]}
+            noteId={noteId}
+          />
+        </PageWrapper>
+      </SignedIn>
+    </>
   );
 }
