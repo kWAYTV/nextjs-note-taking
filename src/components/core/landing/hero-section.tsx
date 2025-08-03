@@ -2,6 +2,7 @@
 
 import { Logo } from "@/components/core/landing/logo";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 import { ArrowRight, Menu, Rocket, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -67,14 +68,15 @@ export default function HeroSection() {
                 </div>
 
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
+                  <ModeToggle />
                   <Button asChild variant="outline" size="sm">
-                    <Link href="#">
-                      <span>Login</span>
+                    <Link href="/sign-in">
+                      <span>Sign In</span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link href="#">
-                      <span>Login</span>
+                    <Link href="/sign-up">
+                      <span>Sign Up</span>
                     </Link>
                   </Button>
                 </div>
