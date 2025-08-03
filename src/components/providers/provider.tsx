@@ -1,8 +1,15 @@
 "use client";
 
-import { ThemeProvider } from "./theme-provider";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { authClient } from "@/lib/auth-client";
+import { getBaseUrl } from "@/lib/utils";
+import { AuthUIProvider } from "@daveyplate/better-auth-ui";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const router = useRouter();
+
   return (
     <ThemeProvider
       attribute="class"
@@ -10,7 +17,23 @@ export function Providers({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <AuthUIProvider
+        authClient={authClient}
+        baseURL={getBaseUrl()}
+        navigate={(path) => router.push(path)}
+        replace={(path) => router.replace(path)}
+        onSessionChange={() => {
+          router.refresh();
+        }}
+        Link={Link}
+        credentials={{
+          username: true,
+          confirmPassword: true,
+        }}
+        avatar
+      >
+        {children}
+      </AuthUIProvider>
     </ThemeProvider>
   );
 }

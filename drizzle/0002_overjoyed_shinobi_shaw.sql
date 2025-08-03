@@ -1,0 +1,1 @@
+DROP TABLE "aris-sh_post" CASCADE;
