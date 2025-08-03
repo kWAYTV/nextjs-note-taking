@@ -70,12 +70,12 @@ export default function HeroSection() {
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
                   <ModeToggle />
                   <Button asChild variant="outline" size="sm">
-                    <Link href="/sign-in">
+                    <Link href="/auth/sign-in">
                       <span>Sign In</span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link href="/sign-up">
+                    <Link href="/auth/sign-up">
                       <span>Sign Up</span>
                     </Link>
                   </Button>
