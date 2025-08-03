@@ -41,7 +41,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         }}
       >
         <NuqsAdapter>{children}</NuqsAdapter>
-        <Toaster />
+        <Toaster theme="system" />
       </AuthUIProvider>
     </ThemeProvider>
   );
