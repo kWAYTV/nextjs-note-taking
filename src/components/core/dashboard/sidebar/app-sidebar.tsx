@@ -1,4 +1,4 @@
-import * as React from "react";
+import { Suspense } from "react";
 
 import { SearchForm } from "@/components/core/dashboard/sidebar/search-form";
 
@@ -38,9 +38,9 @@ export async function AppSidebar({
           <h2>aris.sh</h2>
         </Link>
 
-        <React.Suspense>
+        <Suspense>
           <SearchForm />
-        </React.Suspense>
+        </Suspense>
       </SidebarHeader>
       <SidebarContent className="gap-0">
         <SidebarData data={data} />

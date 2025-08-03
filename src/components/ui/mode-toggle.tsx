@@ -1,17 +1,12 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Monitor, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { motion } from "motion/react";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect, useState } from "react";
 
 const themes = [
-  {
-    key: "system",
-    icon: Monitor,
-    label: "System theme",
-  },
   {
     key: "light",
     icon: Sun,
@@ -33,7 +28,7 @@ export const ModeToggle = ({ className }: ModeToggleProps) => {
   const [mounted, setMounted] = useState(false);
 
   const handleThemeClick = useCallback(
-    (themeKey: "light" | "dark" | "system") => {
+    (themeKey: "light" | "dark") => {
       setTheme(themeKey);
     },
     [setTheme],
@@ -63,7 +58,7 @@ export const ModeToggle = ({ className }: ModeToggleProps) => {
             aria-label={label}
             className="relative h-6 w-6 rounded-full"
             key={key}
-            onClick={() => handleThemeClick(key as "light" | "dark" | "system")}
+            onClick={() => handleThemeClick(key as "light" | "dark")}
             type="button"
           >
             {isActive && (
