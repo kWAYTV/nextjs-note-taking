@@ -38,6 +38,7 @@ import {
   Underline,
   Undo,
 } from "lucide-react";
+import { useCallback, useRef } from "react";
 import { toast } from "sonner";
 
 interface RichTextEditorProps {
@@ -46,6 +47,25 @@ interface RichTextEditorProps {
 }
 
 const RichTextEditor = ({ content, noteId }: RichTextEditorProps) => {
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const debouncedSave = useCallback(
+    (content: JSONContent) => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      timeoutRef.current = setTimeout(() => {
+        if (noteId) {
+          updateNote(noteId, { content })
+            .then(() => toast.success("Note saved"))
+            .catch(() => toast.error("Failed to save note"));
+        }
+      }, 1000);
+    },
+    [noteId],
+  );
+
   const editor = useEditor({
     extensions: [StarterKit, Document, Paragraph, Text],
     immediatelyRender: false,
@@ -53,12 +73,8 @@ const RichTextEditor = ({ content, noteId }: RichTextEditorProps) => {
     editable: true,
     injectCSS: false,
     onUpdate: ({ editor }) => {
-      if (noteId) {
-        const content = editor.getJSON();
-        updateNote(noteId, { content })
-          .then(() => toast.success("Note saved"))
-          .catch(() => toast.error("Failed to save note"));
-      }
+      const content = editor.getJSON();
+      debouncedSave(content);
     },
     content: content ?? {
       type: "doc",
