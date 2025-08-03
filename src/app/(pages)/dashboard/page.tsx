@@ -8,9 +8,10 @@ export default async function Page() {
 
   return (
     <PageWrapper breadcrumbs={[{ label: "Dashboard", href: "/dashboard" }]}>
-      <h1>Notebooks</h1>
-
-      <CreateNotebookButton />
+      <div className="flex items-center justify-between">
+        <h1>Notebooks</h1>
+        <CreateNotebookButton />
+      </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {notebooks.success &&

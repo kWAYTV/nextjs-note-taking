@@ -22,7 +22,7 @@ export default function HeroSection() {
             <div className="mx-auto max-w-7xl px-6 md:px-12">
               <div className="text-center sm:mx-auto sm:w-10/12 lg:mt-0 lg:mr-auto lg:w-4/5">
                 <Link
-                  href="/"
+                  href="auth/sign-in"
                   className="mx-auto flex w-fit items-center gap-2 border border-dashed p-1 pr-3 transition-opacity duration-200 hover:opacity-80"
                 >
                   <span className="bg-muted px-2 py-1 text-xs">New</span>
@@ -46,7 +46,7 @@ export default function HeroSection() {
 
                 <div className="mt-8">
                   <Button size="lg" asChild>
-                    <Link href="#">
+                    <Link href="auth/sign-in">
                       <Rocket className="relative size-4" />
                       <span className="text-nowrap">Start Taking Notes</span>
                     </Link>

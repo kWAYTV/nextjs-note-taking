@@ -24,6 +24,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         baseURL={getBaseUrl()}
         navigate={(path) => router.push(path)}
         replace={(path) => router.replace(path)}
+        redirectTo="/dashboard"
         onSessionChange={() => {
           router.refresh();
         }}
