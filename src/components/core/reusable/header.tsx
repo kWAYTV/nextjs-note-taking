@@ -1,11 +1,10 @@
 "use client";
 
-import { Logo } from "@/components/core/landing/logo";
+import { SharedUserButton } from "@/components/core/reusable/user-button";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { SharedUserButton } from "./user-button";
 
 const menuItems = [
   { name: "Features", href: "/features" },
@@ -30,7 +29,7 @@ export default function Header() {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <Logo />
+                <h2>aris.sh</h2>
               </Link>
 
               <button

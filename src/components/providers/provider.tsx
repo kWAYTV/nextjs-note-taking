@@ -6,6 +6,7 @@ import { getBaseUrl } from "@/lib/utils";
 import { AuthUIProvider } from "@daveyplate/better-auth-ui";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { Toaster } from "sonner";
 
 export function Providers({ children }: { children: React.ReactNode }) {
@@ -38,7 +39,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           verification: true,
         }}
       >
-        {children}
+        <NuqsAdapter>{children}</NuqsAdapter>
         <Toaster richColors />
       </AuthUIProvider>
     </ThemeProvider>
