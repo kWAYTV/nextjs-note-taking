@@ -1,23 +1,13 @@
-// Example model schema from the Drizzle docs
-// https://orm.drizzle.team/docs/sql-schema-declaration
-
 import { relations, sql } from "drizzle-orm";
 import {
+  bigint,
   boolean,
+  integer,
   jsonb,
   pgTable,
-  pgTableCreator,
   text,
   timestamp,
 } from "drizzle-orm/pg-core";
-
-/**
- * This is an example of how to use the multi-project schema feature of Drizzle ORM. Use the same
- * database instance for multiple projects.
- *
- * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
- */
-export const createTable = pgTableCreator((name) => `aris-sh_${name}`);
 
 export const user = pgTable("user", {
   id: text("id").primaryKey(),
@@ -64,6 +54,13 @@ export const account = pgTable("account", {
   password: text("password"),
   createdAt: timestamp("created_at").notNull(),
   updatedAt: timestamp("updated_at").notNull(),
+});
+
+export const rateLimit = pgTable("rate_limit", {
+  id: text("id").primaryKey(),
+  key: text("key"),
+  count: integer("count"),
+  lastRequest: bigint("last_request", { mode: "number" }),
 });
 
 export const verification = pgTable("verification", {
