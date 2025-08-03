@@ -19,7 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { deleteNote } from "@/server/data/notes";
+import { deleteNote } from "@/server/actions/data/notes";
 import { type Note } from "@/server/db/schema";
 import { Loader2, Trash2 } from "lucide-react";
 import Link from "next/link";

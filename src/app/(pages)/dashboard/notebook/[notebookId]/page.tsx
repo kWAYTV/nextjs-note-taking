@@ -4,7 +4,8 @@ import { CreateNoteButton } from "@/components/core/dashboard/notes/create-note-
 import { NoteCard } from "@/components/core/dashboard/notes/note-card";
 import { PageWrapper } from "@/components/core/dashboard/page-wrapper";
 import { NotebookPageSkeleton } from "@/components/core/loading/dashboard/notebooks/notebook-page";
-import { getNotebookById } from "@/server/data/notebooks";
+import { getNotebookById } from "@/server/actions/data/notebooks";
+import type { Note } from "@/server/db/schema";
 
 type Params = Promise<{
   notebookId: string;
@@ -37,7 +38,7 @@ export default async function NotebookPage({ params }: { params: Params }) {
           </div>
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {notebook?.notes?.map((note) => (
+            {notebook?.notes?.map((note: Note) => (
               <NoteCard key={note.id} note={note} />
             ))}
           </div>

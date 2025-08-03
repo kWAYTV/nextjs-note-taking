@@ -3,7 +3,7 @@ import { AuthLoading, SignedIn } from "@daveyplate/better-auth-ui";
 import { PageWrapper } from "@/components/core/dashboard/page-wrapper";
 import RichTextEditor from "@/components/core/dashboard/rich-text-editor";
 import { NotePageSkeleton } from "@/components/core/loading/dashboard/notes/note-page";
-import { getNoteById } from "@/server/data/notes";
+import { getNoteById } from "@/server/actions/data/notes";
 import { type JSONContent } from "@tiptap/react";
 
 type Params = Promise<{

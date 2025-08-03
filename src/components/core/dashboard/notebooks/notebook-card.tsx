@@ -19,7 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { deleteNotebook } from "@/server/data/notebooks";
+import { deleteNotebook } from "@/server/actions/data/notebooks";
 import { type Notebook } from "@/server/db/schema";
 import { Loader2, Trash2 } from "lucide-react";
 import Link from "next/link";

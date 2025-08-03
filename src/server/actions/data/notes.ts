@@ -4,7 +4,7 @@ import {
   getAuthenticatedUserId,
   validateNoteOwnership,
   validateNotebookOwnership,
-} from "@/server/data/user";
+} from "@/server/actions/data/user";
 import { db } from "@/server/db";
 import { type InsertNote, notes } from "@/server/db/schema";
 import { eq } from "drizzle-orm";

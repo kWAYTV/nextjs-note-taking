@@ -9,7 +9,8 @@ import {
   SidebarHeader,
   SidebarRail,
 } from "@/components/ui/sidebar";
-import { getNotebooks } from "@/server/data/notebooks";
+import { getNotebooks } from "@/server/actions/data/notebooks";
+import type { Note, Notebook } from "@/server/db/schema";
 import Link from "next/link";
 
 export async function AppSidebar({
@@ -20,10 +21,10 @@ export async function AppSidebar({
   const data = {
     versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
     navMain: [
-      ...(notebooks.notebooks?.map((notebook) => ({
+      ...(notebooks.notebooks?.map((notebook: Notebook) => ({
         title: notebook.name,
         url: `/dashboard/${notebook.id}`,
-        items: notebook.notes.map((note) => ({
+        items: notebook.notes.map((note: Note) => ({
           title: note.title,
           url: `/dashboard/notebook/${notebook.id}/note/${note.id}`,
         })),

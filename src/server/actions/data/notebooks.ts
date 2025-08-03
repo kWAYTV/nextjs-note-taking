@@ -3,7 +3,7 @@
 import {
   getAuthenticatedUserId,
   validateNotebookOwnership,
-} from "@/server/data/user";
+} from "@/server/actions/data/user";
 import { db } from "@/server/db";
 import { type InsertNotebook, notebooks } from "@/server/db/schema";
 import { eq } from "drizzle-orm";

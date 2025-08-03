@@ -16,7 +16,7 @@ export const auth = betterAuth({
     provider: "pg",
   }),
 
-  appName: "banzclub",
+  appName: "aris-sh",
   secret: env.BETTER_AUTH_SECRET,
   baseURL: env.BETTER_AUTH_URL,
   trustedOrigins: [env.BETTER_AUTH_URL || ""],
@@ -32,7 +32,7 @@ export const auth = betterAuth({
     window: 10, // time window in seconds
     max: 100, // max requests in the window,
     storage: "database",
-    modelName: "rateLimit",
+    modelName: "rate_limit",
   },
 
   user: {
