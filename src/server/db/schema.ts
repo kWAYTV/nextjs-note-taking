@@ -136,6 +136,7 @@ export const schema = {
   user,
   session,
   account,
+  rateLimit,
   verification,
   notebooks,
   notes,
