@@ -12,7 +12,7 @@ export default function CallToAction() {
           <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur.</p>
 
           <form action="" className="mx-auto mt-10 max-w-sm lg:mt-12">
-            <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
+            <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
               <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
 
               <input
@@ -22,7 +22,7 @@ export default function CallToAction() {
               />
 
               <div className="md:pr-1.5 lg:pr-0">
-                <Button aria-label="submit" className="rounded-(--radius)">
+                <Button aria-label="submit">
                   <span className="hidden md:block">Get Started</span>
                   <SendHorizonal
                     className="relative mx-auto size-5 md:hidden"
