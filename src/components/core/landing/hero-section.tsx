@@ -90,11 +90,9 @@ export default function HeroSection() {
               <div className="text-center sm:mx-auto sm:w-10/12 lg:mt-0 lg:mr-auto lg:w-4/5">
                 <Link
                   href="/"
-                  className="mx-auto flex w-fit items-center gap-2 rounded-(--radius) border p-1 pr-3"
+                  className="mx-auto flex w-fit items-center gap-2 border p-1 pr-3"
                 >
-                  <span className="bg-muted rounded-[calc(var(--radius)-0.25rem)] px-2 py-1 text-xs">
-                    New
-                  </span>
+                  <span className="bg-muted px-2 py-1 text-xs">New</span>
                   <span className="text-sm">Introduction Tailark Html</span>
                   <span className="block h-4 w-px bg-(--color-border)"></span>
 
@@ -125,7 +123,7 @@ export default function HeroSection() {
               </div>
               <div className="x-auto relative mx-auto mt-8 max-w-lg sm:mt-12">
                 <div className="absolute inset-0 -top-8 left-1/2 -z-20 h-56 w-full -translate-x-1/2 [background-image:linear-gradient(to_bottom,transparent_98%,theme(colors.gray.200/75%)_98%),linear-gradient(to_right,transparent_94%,_theme(colors.gray.200/75%)_94%)] [background-size:16px_35px] [mask:radial-gradient(black,transparent_95%)] dark:opacity-10"></div>
-                <div className="absolute inset-x-0 top-12 -z-[1] mx-auto h-1/3 w-2/3 rounded-full bg-blue-300 blur-3xl dark:bg-white/20"></div>
+                <div className="absolute inset-x-0 top-12 -z-[1] mx-auto h-1/3 w-2/3 bg-blue-300 blur-3xl dark:bg-white/20"></div>
 
                 <Swiper
                   slidesPerView={1}
@@ -135,7 +133,7 @@ export default function HeroSection() {
                   modules={[Autoplay, EffectCoverflow]}
                 >
                   <SwiperSlide className="px-2">
-                    <div className="bg-background h-44 max-w-lg rounded-(--radius) border p-9">
+                    <div className="bg-background h-44 max-w-lg border p-9">
                       <div className="mx-auto h-fit w-full">
                         <NetlifyLogo />
                       </div>
@@ -145,7 +143,7 @@ export default function HeroSection() {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="px-2">
-                    <div className="bg-background h-44 max-w-lg rounded-(--radius) border p-9">
+                    <div className="bg-background h-44 max-w-lg border p-9">
                       <div className="mx-auto h-fit w-full">
                         <AstroLogo />
                       </div>
@@ -155,7 +153,7 @@ export default function HeroSection() {
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="px-2">
-                    <div className="bg-background h-44 max-w-lg rounded-(--radius) border p-9">
+                    <div className="bg-background h-44 max-w-lg border p-9">
                       <div className="mx-auto h-fit w-full">
                         <WorkOsLogo />
                       </div>
