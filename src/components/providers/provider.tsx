@@ -6,6 +6,7 @@ import { getBaseUrl } from "@/lib/utils";
 import { AuthUIProvider } from "@daveyplate/better-auth-ui";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Toaster } from "sonner";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -27,12 +28,18 @@ export function Providers({ children }: { children: React.ReactNode }) {
         }}
         Link={Link}
         credentials={{
-          username: true,
           confirmPassword: true,
+          forgotPassword: true,
+          rememberMe: true,
         }}
+        emailVerification
         avatar
+        deleteUser={{
+          verification: true,
+        }}
       >
         {children}
+        <Toaster richColors />
       </AuthUIProvider>
     </ThemeProvider>
   );
