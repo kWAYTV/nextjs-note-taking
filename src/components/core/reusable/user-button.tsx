@@ -11,6 +11,7 @@ export const SharedUserButton = () => {
           href: "/dashboard",
           icon: <PanelsLeftBottom />,
           signedIn: true,
+          separator: true,
         },
       ]}
     />
