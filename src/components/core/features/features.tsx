@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Settings2, Sparkles, Zap } from "lucide-react";
+import { Code, Shield, Zap } from "lucide-react";
 import { type ReactNode } from "react";
 
 export default function Features() {
@@ -8,11 +8,11 @@ export default function Features() {
       <div className="@container mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-4xl font-semibold text-balance lg:text-5xl">
-            Built to cover your needs
+            Crafted for developers, like you.
           </h2>
           <p className="mt-4">
-            Libero sapiente aliquam quibusdam aspernatur, praesentium iusto
-            repellendus.
+            Smart, flexible and powerful - everything you need to build your
+            second brain.
           </p>
         </div>
         <div className="mx-auto mt-8 grid max-w-sm gap-6 [--color-background:var(--color-muted)] [--color-card:var(--color-muted)] *:text-center md:mt-16 @min-4xl:max-w-full @min-4xl:grid-cols-3 dark:[--color-muted:var(--color-zinc-900)]">
@@ -22,13 +22,13 @@ export default function Features() {
                 <Zap className="size-6" aria-hidden />
               </CardDecorator>
 
-              <h3 className="mt-6 font-medium">Customizable</h3>
+              <h3 className="mt-6 font-medium">Quick Notes</h3>
             </CardHeader>
 
             <CardContent>
               <p className="text-sm">
-                Extensive customization options, allowing you to tailor every
-                aspect to meet your specific needs.
+                Capture ideas instantly with lightning-fast input and
+                keyboard-first UX. No friction — just flow.
               </p>
             </CardContent>
           </Card>
@@ -36,16 +36,16 @@ export default function Features() {
           <Card className="group border-0 shadow-none">
             <CardHeader className="pb-3">
               <CardDecorator>
-                <Settings2 className="size-6" aria-hidden />
+                <Code className="size-6" aria-hidden />
               </CardDecorator>
 
-              <h3 className="mt-6 font-medium">You have full control</h3>
+              <h3 className="mt-6 font-medium">Developer Friendly</h3>
             </CardHeader>
 
             <CardContent>
               <p className="mt-3 text-sm">
-                From design elements to functionality, you have complete control
-                to create a unique and personalized experience.
+                Markdown, code blocks, CLI shortcuts, and Git-style versioning.
+                Feels like home.
               </p>
             </CardContent>
           </Card>
@@ -53,16 +53,16 @@ export default function Features() {
           <Card className="group border-0 shadow-none">
             <CardHeader className="pb-3">
               <CardDecorator>
-                <Sparkles className="size-6" aria-hidden />
+                <Shield className="size-6" aria-hidden />
               </CardDecorator>
 
-              <h3 className="mt-6 font-medium">Powered By AI</h3>
+              <h3 className="mt-6 font-medium">Secure by Design</h3>
             </CardHeader>
 
             <CardContent>
               <p className="mt-3 text-sm">
-                Elements to functionality, you have complete control to create a
-                unique experience.
+                Your notes are private. Local-first architecture and optional
+                end-to-end encryption mean full control.
               </p>
             </CardContent>
           </Card>

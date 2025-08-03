@@ -7,9 +7,12 @@ export default function CallToAction() {
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h2 className="text-4xl font-semibold text-balance lg:text-5xl">
-            Start Building
+            Build your mind like a developer.
           </h2>
-          <p className="mt-4">Libero sapiente aliquam quibusdam aspernatur.</p>
+          <p className="mt-4">
+            Fast, local-first and built for code. Notes that work the way you
+            think.
+          </p>
 
           <form action="" className="mx-auto mt-10 max-w-sm lg:mt-12">
             <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
