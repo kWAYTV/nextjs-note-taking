@@ -3,12 +3,12 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { nextCookies } from "better-auth/next-js";
 import { haveIBeenPwned, openAPI } from "better-auth/plugins";
 
-import { ChangeEmailTemplate } from "@/actions/email/emails/change-email";
-import { EmailVerificationTemplate } from "@/actions/email/emails/email-verification";
-import { PasswordResetTemplate } from "@/actions/email/emails/password-reset";
-import { sendEmailAction } from "@/actions/email/send-email.action";
 import { env } from "@/env";
 import { hashPassword, verifyPassword } from "@/lib/hash";
+import { ChangeEmailTemplate } from "@/server/actions/email/emails/change-email";
+import { EmailVerificationTemplate } from "@/server/actions/email/emails/email-verification";
+import { PasswordResetTemplate } from "@/server/actions/email/emails/password-reset";
+import { sendEmailAction } from "@/server/actions/email/send-email.action";
 import { db } from "@/server/db";
 
 export const auth = betterAuth({
