@@ -95,7 +95,7 @@ export default function HeroSection() {
                   className="mx-auto flex w-fit items-center gap-2 border p-1 pr-3"
                 >
                   <span className="bg-muted px-2 py-1 text-xs">New</span>
-                  <span className="text-sm">Introducing Aris Notes v2.0</span>
+                  <span className="text-sm">Introducing v2.0</span>
                   <span className="block h-4 w-px bg-(--color-border)"></span>
 
                   <ArrowRight className="size-4" />
